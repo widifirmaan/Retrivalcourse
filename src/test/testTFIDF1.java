@@ -3,20 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package retrievalinformation;
+package test;
 
 import java.util.ArrayList;
+import java.util.List;
 import model.Document;
 import model.InvertedIndex;
 import model.Posting;
+import model.Term;
 
 /**
  *
- * @author w@widifirmaan.web.id
+ * @author Lenovo
  */
-public class TestMakeTFIDF {
+public class testTFIDF1 {
+
     public static void main(String[] args) {
-         // seting dokumen
+        // seting dokumen
         Document doc1 = new Document(1, "Shipment of gold damaged in a fire");
         Document doc2 = new Document(2, "delivery of silver arrived in a silver truck");
         Document doc3 = new Document(3, "shipment of gold arrived in a truck");
@@ -29,13 +32,13 @@ public class TestMakeTFIDF {
         index.addNewDocument(doc3);
         
         // panggil fungsi search
-        index.makeDictionaryWithTermNumber();
-        
-        ArrayList<Posting> postings = index.makeTFIDF(2);
-        
-        for (int i = 0; i < postings.size(); i++) {
-            System.out.println(postings.get(i).getTerm() + " : " + postings.get(i).getWeight());
+        index.makeDictionary();
+        ArrayList<Posting> result = index.search("machine learning inteligence");
+        // tampilkan isi document dan id-nya
+        for (int i = 0; i < result.size(); i++) {
+            System.out.println("id_doc = " +result.get(i).getDocument().getId());
+            System.out.println(result.get(i).getDocument().getContent());
         }
+        
     }
 }
-

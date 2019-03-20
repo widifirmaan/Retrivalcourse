@@ -5,69 +5,47 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author w@widifirmaan.web.id
+ * @author Lenovo
  */
-public class Term implements Comparable<Term> {
-
+public class Term implements Comparable<Term>{
     private String term;
-    private PostingList termList;
-
-    public Term() {
-        termList = new PostingList();
+    private ArrayList<Posting> postingList = new ArrayList<Posting>();
+    
+    public Term(){
+        
     }
-
-    public Term(String term, PostingList termList) {
+    
+    public Term(String term){
         this.term = term;
-        this.termList = termList;
     }
 
-    public Term(String term) {
-        this.term = term;
-        this.termList = new PostingList();
+    public int getNumberOfDocument(){
+        return postingList.size();
     }
-
-    /**
-     * @return the term
-     */
+    
     public String getTerm() {
         return term;
     }
 
-    /**
-     * @return the termList
-     */
-    public PostingList getTermList() {
-        return termList;
-    }
-
-    /**
-     * @param term the term to set
-     */
     public void setTerm(String term) {
         this.term = term;
     }
 
-    /**
-     * @param termList the termList to set
-     */
-    public void setTermList(PostingList termList) {
-        this.termList = termList;
+    public ArrayList<Posting> getPostingList() {
+        return postingList;
+    }
+
+    public void setPostingList(ArrayList<Posting> postingList) {
+        this.postingList = postingList;
     }
 
     @Override
-    public int compareTo(Term o) {
-        return this.term.compareToIgnoreCase(o.term);
+    public int compareTo(Term t) {
+        return term.compareToIgnoreCase(t.getTerm());
     }
-
-    /**
-     * @return the numberOfDocument
-     */
-    public int getNumberOfDocument() {
-        return termList.getPostings().size();
-    }
-    
-    
 
 }

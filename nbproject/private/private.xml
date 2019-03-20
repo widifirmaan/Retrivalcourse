@@ -3,20 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/model/Term.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/retrievalinformation/TestTfIdf.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/model/Posting.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/retrievalinformation/TestSortedIndex.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/retrievalinformation/TestGetListPosting.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/retrievalinformation/TestSearchQuery.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/retrievalinformation/TestQuery.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/retrievalinformation/TestUnsortedIndex.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/model/Document.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/retrievalinformation/TestIntersection.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/retrievalinformation/TestMakeTFIDF.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/model/PostingList.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/retrievalinformation/RetrievalInformation.java</file>
-            <file>file:/Users/widifirmaan/Downloads/Retrieval-master/model/src/model/InvertedIndex.java</file>
+            <file>file:/Users/widifirmaan/Documents/GitHub/Retrivalcourse/src/model/Document.java</file>
+            <file>file:/Users/widifirmaan/Documents/GitHub/Retrivalcourse/src/model/InvertedIndex.java</file>
         </group>
     </open-files>
 </project-private>
