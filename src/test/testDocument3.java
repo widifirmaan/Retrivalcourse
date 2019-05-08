@@ -3,43 +3,45 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package test;
 
 import java.util.ArrayList;
+import java.util.List;
 import model.Document;
 import model.Posting;
 
 /**
  *
- * @author Lenovo
+ * @author admin
  */
 public class testDocument3 {
 
     public static void main(String[] args) {
-        Document doc1= new Document(1, "computer information retrieval.");
-        Document doc2= new Document(2, "computer organization and architecture.");
-        
-        String tokenDoc1[] = doc1.getListofTerm();
-        String tokenDoc2[] = doc2.getListofTerm();
-        
+        // seting dokumen
+        Document doc1 = new Document(1, "computer information retrieval.");
+        Document doc2 = new Document(2, "computer organization and architecture");
         ArrayList<Document> listOfDocument = new ArrayList<Document>();
         listOfDocument.add(doc1);
         listOfDocument.add(doc2);
-        
+        // siapkan posting List
         ArrayList<Posting> list = new ArrayList<Posting>();
-        
+        // buat node Posting utk listofdocument
         for (int i = 0; i < listOfDocument.size(); i++) {
+            // buat listOfTerm dari document ke -i
             String[] termResult = listOfDocument.get(i).getListofTerm();
+            // loop sebanyak term dari document ke i
             for (int j = 0; j < termResult.length; j++) {
-                Posting tempPosting = new Posting(termResult[j],listOfDocument.get(i));
-                   list.add(tempPosting);
+                // buat object tempPosting
+                Posting tempPosting = new Posting(termResult[j],
+                        listOfDocument.get(i));
+                list.add(tempPosting);
             }
         }
-        System.out.println("Ukuran List = " + list.size() + "\n");
+
+        // panggil list posting
+        System.out.println("Ukuran list = " + list.size());
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i).getTerm() + "," + list.get(i).getDocument().getId());
         }
     }
-    
 }

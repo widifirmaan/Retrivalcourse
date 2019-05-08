@@ -14,7 +14,7 @@ import model.Term;
 
 /**
  *
- * @author Lenovo
+ * @author admin
  */
 public class testTFIDF1 {
 
