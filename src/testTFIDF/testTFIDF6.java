@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test;
+package testTFIDF;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ import model.Term;
  *
  * @author admin
  */
-public class testTFIDF3 {
+public class testTFIDF6 {
 
     public static void main(String[] args) {
         // seting dokumen
@@ -44,6 +44,25 @@ public class testTFIDF3 {
                 +", numberofTerm = "+tempPosting.get(j).getNumberOfTerm());
             }
         }
+        
+        // number of document
+        String tempString = "silver";
+        int result2 = index.getDocumentFrequency(tempString);
+        System.out.println("Number of Doc with "+tempString+" is "+result2);
+        
+        // idf
+        String tempString1 = "silver";
+        double result3 = index.getInverseDocumentFrequency(tempString1);
+        System.out.println("IDF of "+tempString1+" is "+result3);
+        
+        // tf
+        // idf
+        String tempString2 = "truck";
+        int idDoc=2;
+        int result4 = index.getTermFrequency(tempString2, idDoc);
+        System.out.println("TF of "+tempString2+" in idDoc = "+idDoc+ " is "+result4);
+        
+    
         
     }
 }

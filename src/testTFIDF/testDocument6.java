@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test;
+package testTFIDF;
 
 import java.util.ArrayList;
 import java.util.List;
 import model.Document;
 import model.InvertedIndex;
 import model.Posting;
+import model.Term;
 
 /**
  *
  * @author admin
  */
-public class testDocument4 {
+public class testDocument6 {
 
     public static void main(String[] args) {
         // seting dokumen
@@ -29,12 +30,19 @@ public class testDocument4 {
         index.addNewDocument(doc1);
         index.addNewDocument(doc2);
         index.addNewDocument(doc3);
-        // panggil function unsorted Posting List
-        ArrayList<Posting> list = index.getUnsortedPostingList();
-        // panggil list posting
-        System.out.println("Ukuran list = " + list.size());
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i).getTerm() + "," + list.get(i).getDocument().getId());
+        // panggil fungsi make dictionary
+        index.makeDictionary();
+        // panggil term yang ada dan jumlah posting
+        for (int i = 0; i < index.getDictionary().size(); i++) {
+            Term tempTerm = index.getDictionary().get(i);
+            System.out.println(tempTerm.getTerm()+","
+                    +tempTerm.getNumberOfDocument());
+            for (int j = 0; j < tempTerm.getNumberOfDocument(); j++) {
+                Posting tempPosting = tempTerm.getPostingList().get(j);
+                Document tempDoc = tempPosting.getDocument();
+                System.out.println("idDoc = "+tempDoc.getId());
+            }
         }
+        
     }
 }
