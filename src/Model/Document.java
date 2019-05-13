@@ -29,8 +29,23 @@ public class Document implements Comparable<Document> {
     private String content;
     private String realContent;
     private String namaDokumen;
+public Document() {
+    }
 
+    public Document(int id) {
+        this.id = id;
+    }
 
+    public Document(String content) {
+        this.content = content;
+        this.realContent = content;
+    }
+
+    public Document(int id, String content) {
+        this.id = id;
+        this.content = content;
+        this.realContent = content;
+    }
 
     public String getNamaDokumen() {
         return namaDokumen;
@@ -48,23 +63,15 @@ public class Document implements Comparable<Document> {
         this.realContent = realContent;
     }
 
-    public Document() {
-    }
 
-    public Document(int id) {
-        this.id = id;
-    }
-
-    public Document(String content) {
-        this.content = content;
-        this.realContent = realContent;
-    }
-
-    public Document(int id, String content) {
+    public Document(int id, String content, String realContent, String namaDokumen) {
         this.id = id;
         this.content = content;
         this.realContent = realContent;
+        this.namaDokumen = namaDokumen;
     }
+
+
 
     @Override
     public String toString() {
@@ -149,6 +156,7 @@ public class Document implements Comparable<Document> {
 
             while((line = bufferedReader.readLine()) != null) {
                 this.setContent(line);
+                this.setRealContent(line);
             }   
 
             bufferedReader.close();         
@@ -184,7 +192,6 @@ public class Document implements Comparable<Document> {
             System.out.println("Exception: " + ex);
         }
         content = sb.toString();
-        realContent = getRealContent().toString();
     }
     
 }

@@ -12,6 +12,7 @@ import static View.Home.index;
 import java.io.File;
 import java.util.ArrayList;
 import javax.swing.JTable;
+import javax.swing.table.TableColumn;
 
 /**
  *
@@ -27,6 +28,11 @@ public class CariDokumen extends javax.swing.JFrame {
         initComponents();
         index = new InvertedIndex();
         index.readDirectory(new File("Kitab"));
+        TabelSearch.setAutoResizeMode(TabelSearch.AUTO_RESIZE_OFF);
+        TableColumn col = TabelSearch.getColumnModel().getColumn(0);
+        col.setPreferredWidth(50);
+        col = TabelSearch.getColumnModel().getColumn(2);
+        col.setPreferredWidth(2000);
     }
 
     /**
@@ -103,7 +109,7 @@ public class CariDokumen extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "ID Dokumen", "Judul", "Isi Dokumen"
+                "ID", "Judul", "Isi Dokumen"
             }
         ) {
             boolean[] canEdit = new boolean [] {
