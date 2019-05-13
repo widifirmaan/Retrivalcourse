@@ -7,7 +7,7 @@ package Model;
 
 /**
  *
- * @author AxYxA
+ * @author W
  */
 public class Posting implements Comparable<Posting> {
 

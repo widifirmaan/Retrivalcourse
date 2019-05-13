@@ -9,7 +9,7 @@ import Model.Document;
 
 /**
  *
- * @author AxYxA
+ * @author W
  */
 public class TambahDokumen extends javax.swing.JFrame {
 

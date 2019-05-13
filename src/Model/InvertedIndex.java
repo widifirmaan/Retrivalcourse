@@ -7,16 +7,11 @@ package Model;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.function.Consumer;
 
 /**
  *
- * @author AxYxA
+ * @author W
  */
 public class InvertedIndex {
 

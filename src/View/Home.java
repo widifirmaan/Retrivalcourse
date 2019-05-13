@@ -10,7 +10,7 @@ import java.io.File;
 
 /**
  *
- * @author AxYxA
+ * @author W
  */
 public class Home extends javax.swing.JFrame {
 

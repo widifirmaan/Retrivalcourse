@@ -7,7 +7,7 @@ package Model;
 
 /**
  *
- * @author AxYxA
+ * @author W
  */
 public class SearchingResult implements Comparable<SearchingResult> {
 

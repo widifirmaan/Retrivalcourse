@@ -14,25 +14,23 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.CharArraySet;
-import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.en.EnglishAnalyzer;
 import org.apache.lucene.analysis.en.PorterStemFilter;
 import org.apache.lucene.analysis.id.IndonesianAnalyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.util.Version;
 
 /**
  *
- * @author AxYxA
+ * @author W
  */
 public class Document implements Comparable<Document> {
     private int id;
     private String content;
     private String realContent;
     private String namaDokumen;
+
+
 
     public String getNamaDokumen() {
         return namaDokumen;
@@ -59,13 +57,13 @@ public class Document implements Comparable<Document> {
 
     public Document(String content) {
         this.content = content;
-        this.realContent = content;
+        this.realContent = realContent;
     }
 
     public Document(int id, String content) {
         this.id = id;
         this.content = content;
-        this.realContent = content;
+        this.realContent = realContent;
     }
 
     @Override
@@ -186,6 +184,7 @@ public class Document implements Comparable<Document> {
             System.out.println("Exception: " + ex);
         }
         content = sb.toString();
+        realContent = getRealContent().toString();
     }
     
 }

@@ -15,7 +15,8 @@ import javax.swing.JTable;
 
 /**
  *
- * @author AxYxA
+ * @author W
+ *
  */
 public class CariDokumen extends javax.swing.JFrame {
 
@@ -48,65 +49,65 @@ public class CariDokumen extends javax.swing.JFrame {
 
         TabelSearch.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "ID Dokumen", "Judul"
+                "ID Dokumen", "Judul", "Isi Dokumen"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -175,6 +176,7 @@ public class CariDokumen extends javax.swing.JFrame {
         for (int i = 0; i < TabelSearch.getRowCount(); i++) {
             TabelSearch.setValueAt("", i, 0);
             TabelSearch.setValueAt("", i, 1);
+            TabelSearch.setValueAt("", i, 2);
         }
         Home.index.makeDictionaryWithTermNumber();
         String query = SearchQuery.getText();
@@ -188,6 +190,7 @@ public class CariDokumen extends javax.swing.JFrame {
             if (Home.getIndex().getCosineSimilarity(queryPostingList, PostingDokumen) > 0) {
                 TabelSearch.setValueAt(listDocs.get(i).getId(), x, 0);
                 TabelSearch.setValueAt(listDocs.get(i).getNamaDokumen(), x, 1);
+                TabelSearch.setValueAt(listDocs.get(i).getRealContent(), x, 2);
                 x++;
             }
         }
