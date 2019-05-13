@@ -86,7 +86,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Berita Koran"/>
+            <Property name="text" type="java.lang.String" value="Pencarian Kitab Yohanes"/>
           </Properties>
         </Component>
       </SubComponents>

@@ -6,7 +6,10 @@
 package View;
 
 import Model.Document;
+import Model.InvertedIndex;
 import Model.Posting;
+import static View.Home.index;
+import java.io.File;
 import java.util.ArrayList;
 import javax.swing.JTable;
 
@@ -21,6 +24,8 @@ public class CariDokumen extends javax.swing.JFrame {
      */
     public CariDokumen() {
         initComponents();
+        index = new InvertedIndex();
+        index.readDirectory(new File("Kitab"));
     }
 
     /**

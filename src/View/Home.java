@@ -21,7 +21,7 @@ public class Home extends javax.swing.JFrame {
     public Home() {
         initComponents();
         index = new InvertedIndex();
-        index.readDirectory(new File("Berita Koran"));
+        index.readDirectory(new File("Kitab"));
     }
 
     public static InvertedIndex getIndex() {
@@ -62,7 +62,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Berita Koran");
+        jLabel1.setText("Pencarian Kitab Yohanes");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
